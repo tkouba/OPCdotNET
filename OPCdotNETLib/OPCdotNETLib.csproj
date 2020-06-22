@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+    <Product>OPC .NET client library</Product>
+    <Company>ARCI</Company>
+    <Authors>Tomas ARCI Kouba</Authors>
+    <Copyright>Copyright © Arci 2017-2020</Copyright>
+    <Description>OPC .NET client library</Description>
+    <RootNamespace>OPC</RootNamespace>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\OPCdotNETLib.xml</DocumentationFile>
+    <OutputPath>bin\$(Configuration)\$(TargetFramework)\</OutputPath>
+  </PropertyGroup>
+
+
+</Project>
