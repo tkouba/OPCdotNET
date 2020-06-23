@@ -12,27 +12,30 @@ namespace ServerList
         {
 
             Console.WriteLine("OPC Data Access 1.0");
-            foreach (var server in OpcServerList.ListAll(OpcServerList.OpcDataAccess10))
-            {
-                Console.WriteLine("'{0}' ID={1} [{2}]", server.Name, server.ProgID, server.ClsID);
-            }
+            ListAllServers(OpcServerList.OpcDataAccess10);
 
             Console.WriteLine("OPC Data Access 2.0");
-            foreach (var server in OpcServerList.ListAllData20())
-            {
-                Console.WriteLine("'{0}' ID={1} [{2}]", server.Name, server.ProgID, server.ClsID);
-            }
+            ListAllServers(OpcServerList.OpcDataAccess20);
 
             Console.WriteLine("OPC Data Access 3.0");
-            foreach (var server in OpcServerList.ListAll(OpcServerList.OpcDataAccess30))
-            {
-                Console.WriteLine("'{0}' ID={1} [{2}]", server.Name, server.ProgID, server.ClsID);
-            }
+            ListAllServers(OpcServerList.OpcDataAccess30);
 
             Console.WriteLine("OPC XML Data Access");
-            foreach (var server in OpcServerList.ListAll(OpcServerList.OpcDataAccessXML))
+            ListAllServers(OpcServerList.OpcDataAccessXML);
+        }
+
+        private static void ListAllServers(Guid catid)
+        {
+            try
             {
-                Console.WriteLine("'{0}' ID={1} [{2}]", server.Name, server.ProgID, server.ClsID);
+                foreach (var server in OpcServerList.ListAll(catid))
+                {
+                    Console.WriteLine("  '{0}' ID={1} [{2}]", server.Name, server.ProgID, server.ClsID);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("  *** ERROR *** {0}", ex.Message);
             }
         }
     }
