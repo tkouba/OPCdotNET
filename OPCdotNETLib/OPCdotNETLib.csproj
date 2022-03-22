@@ -1,16 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
-    <Product>OPC .NET client library</Product>
-    <Company>ARCI</Company>
-    <Authors>Tomas ARCI Kouba</Authors>
-    <Copyright>Copyright © Arci 2017-2020</Copyright>
-    <Description>OPC .NET client library</Description>
+    <TargetFrameworks>net40;net472;netstandard2.0</TargetFrameworks>
+    <Product>OPC DA .NET client library</Product>
+    <Company></Company>
+    <Authors>Tomas ARCI Kouba, VISCOM</Authors>
+    <Copyright>Copyright © VISCOM 2010, Arci 2017-2022</Copyright>
+    <Description>OPC DA .NET client library</Description>
     <RootNamespace>OPC</RootNamespace>
     <PlatformTarget>x86</PlatformTarget>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\OPCdotNETLib.xml</DocumentationFile>
     <OutputPath>bin\$(Configuration)\$(TargetFramework)\</OutputPath>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tkouba/OPCdotNET</RepositoryUrl>
+    <PackageTags>OPC DA</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 
