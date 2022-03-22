@@ -271,7 +271,11 @@ namespace OPC.Data
         /// </summary>
         ~OpcGroup()
         {
-            InternalRemove(false);
+            try
+            {
+                InternalRemove(false);
+            }
+            catch { /* NOP */ }
         }
 
         /// <summary>

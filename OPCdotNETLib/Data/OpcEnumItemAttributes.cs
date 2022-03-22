@@ -39,7 +39,11 @@ namespace OPC.Data
         /// </summary>
         ~OpcEnumItemAttributes()
         {
-            ReleaseComObject();
+            try
+            {
+                ReleaseComObject();
+            }
+            catch { /* NOP */ }
         }
 
         /// <summary>

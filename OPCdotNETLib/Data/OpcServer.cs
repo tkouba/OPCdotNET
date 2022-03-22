@@ -64,7 +64,11 @@ namespace OPC.Data
         /// </summary>
         ~OpcServer()
         {
-            InternalDisconnect();
+            try
+            {
+                InternalDisconnect();
+            }
+            catch { /* NOP */ }
         }
 
         /// <summary>
